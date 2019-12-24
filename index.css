@@ -1,0 +1,24 @@
+.flexContainer{
+    width:85%;
+    background-color: aliceblue;
+    margin:auto;
+    display:'flex';
+    flex-direction:"column";
+    border-radius: 10px;
+}
+
+.flexChild{
+    text-align: center;
+}
+
+#topImage{
+    width:100%;
+    height:auto;
+    background-image: url('top.jpg');
+}
+
+body{
+    /* background-image: url('back.png'); */
+    background: #a50000 url('diWen.png') repeat;
+}
+

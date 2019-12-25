@@ -7,32 +7,144 @@
     </head>
 
     <body>
-        <div id = "background">
-            <!-- <div class="flexContainer"> -->
-                <img src = 'top.jpg' style="width:100%;height:auto;">
-            <!-- </div> -->
+        <div class="section">
+            <img src = 'top.jpg' style="width:100%;height:auto;">
+            <img src = 'mid.png' style="width:100%;height:auto;">
             <div class = "flexContainer">
-                <!-- <div class="flexChild">
-                    <h1 class="title">真爱配对 八字合婚</h1>
-                </div> -->
                 <div class="flexChild">
-                    <img src = 'mid.png' style="width:100%;height:auto;">
-                </div>
-                <div class="flexChild">
-                    <div style="text-align: center;">
-                        <form action="/action_page.php" style="display: inline-block;">
-                                年:<br>
-                            <input type="text" name="firstname">
+                    <div class="flexContainer">
+                        <div class='flexChild'>
+                            <p>
+                                想知道你的未来伴侣在哪里吗?<br>
+                                想知道你的命中注定之人身在何处吗？<br>
+                            </p>
+                        </div>
+                        <div class="flexChild">
+                            <form action="/action_page.php" style="display: inline-block;">
+                                <div class="bzhh_fl">
+                                    <p>命主名字：
+                                        <input id="ming" class="xingming" name="consignee" value="" placeholder="命主名字" type="text">
+                                    </p>
+                                    <p>命主性别：
+                                        <label>
+                                            <input name="sex" type="radio" id="sex_0" value="男" checked="checked">
+                                            男生</label>
+                                        <label>
+                                            <input name="sex" type="radio" id="sex_1" value="女">
+                                            女生</label>
+                                        <br>
+                                    </p>
+                                    <p>命主历法：
+                                        <label>
+                                            <input name="lifa" type="radio" id="lifa_0" value="公" checked="checked">
+                                            公历</label>
+                                        <label>
+                                            <input name="lifa" type="radio" id="lifa_1" value="农">
+                                            农历</label>
+                                    </p>
+                                    <p>命主生日：
+                                        <input name="born" type="text" id="bsday1" size="20" value="" class="shengri bsday" placeholder="年年年年/月月/日日">
+                                    </p>
+                                </div>
                                 <br>
-                                月:<br>
-                            <input type="text" name="lastname">
                                 <br>
-                                日:<br>
-                            <input type="text" name="day">
-                                <br><br>
-                            <input type="submit" value="现在开始测算！">
-                        </form> 
+                                <br>
+                                <div class="bzhh_fr">
+                                    <p>配偶姓名：
+                                        <input id="aname" class="xingming" name="aname" value="" placeholder="配偶姓名" type="text">
+                                    </p>
+                                    <p>配偶历法：
+                                        <label>
+                                            <input name="alifa" type="radio" id="lifa_0" value="公" checked="checked">
+                                            公历</label>
+                                        <label>
+                                            <input name="alifa" type="radio" id="lifa_1" value="农">
+                                            农历</label>
+                                    </p>
+                                    <p>配偶生日：
+                                        <input name="aborn" type="text" id="bsday2" size="20" value="" class="shengri bsday" placeholder="年年年年/月月/日日">
+                                    </p>
+                                    <p>手机号码：
+                                        <input id="phone" class="shengri" name="phone" value="" placeholder="用于接收结果（重要）" type="text">
+                                    </p>
+                                </div>
+                            </form> 
+                        </div>
+                        <div class = 'flexChild'>
+                            <button onclick="process()">
+                                现在就开始测算！
+                            </button>
+                        </div>
                     </div>
+                </div>
+            </div>
+            <img src = 'mid1.png' class="mainImage">
+            <img src = 'mid2.png' class="mainImage">
+            <img src = 'mid3.png' class="mainImage">
+            <img src = 'bot.png' style="width:100%;height:auto;">
+        </div>
+        <div class="section">
+            <div id="two">
+                <div id="loader"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="flexContainer">
+                <div class="flexChild">
+                    <h1>宝贝实在编不下去了！</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="flexContainer">
+                <div class="flexChild">
+                    <h1>我最爱的宝贝</h1>
+                </div>
+            </div>
+                <img class='image' src='image (1).jpg' alt='baobao'>
+                <img class='image' src='image (2).jpg' alt='baobao'>
+                <img class='image' src='image (3).jpg' alt='baobao'>
+                <img class='image' src='image (4).jpg' alt='baobao'>
+                <img class='image' src='image (5).jpg' alt='baobao'>
+                <img class='image' src='image (6).jpg' alt='baobao'>
+                <img class='image' src='image (7).jpg' alt='baobao'>
+                <img class='image' src='image (8).jpg' alt='baobao'>
+                <img class='image' src='image (9).jpg' alt='baobao'>
+                <img class='image' src='image (10).jpg' alt='baobao'>
+                <img class='image' src='image (11).jpg' alt='baobao'>
+                <img class='image' src='image (12).jpg' alt='baobao'>
+                <img class='image' src='image (13).jpg' alt='baobao'>
+                <img class='image' src='image (14).jpg' alt='baobao'>
+                <img class='image' src='image (15).jpg' alt='baobao'>
+                <img class='image' src='image (16).jpg' alt='baobao'>
+                <img class='image' src='image (17).jpg' alt='baobao'>
+                <img class='image' src='image (18).jpg' alt='baobao'>
+            <!-- </div> -->
+                <button id='bbb' onclick="nextNext()">
+                    继续合婚
+                </button>
+        </div>
+        <div class="section">
+            <div style="margin-top:200px;">
+                <div style = "display:flex;flex-direction: row;flex-wrap: nowrap;width:100%;text-align: center;">
+                    <img alt='zuo' src='zuo.jpg' style='width:30%'>
+                    <div style="width: 40%;background-color: white;">
+                        <form style="text-align: center;">
+                            <h1>我滴包贝儿，做我的女朋友吧！</h1>
+                                <input type="radio" name="gender" value="male"> Ok<br>
+                                <input type="radio" name="gender" value="female"> 好的<br>
+                                <input type="radio" name="gender" value="other"> Yes<br>  
+                                <input type="radio" name="gender" value="other"> No problem<br>  
+                                <input type="radio" name="gender" value="other"> 没问题<br>  
+                                <input type="radio" name="gender" value="other"> 我等到花儿都谢了<br>  
+                                <input type="radio" name="gender" value="other"> 我也爱你<br>  
+                                <br>
+                                <br>
+                                <input type="submit" value="Submit" onclick="final()">
+                        </form>
+                    </div>
+                    <img alt='you' src='you.jpg' style='width:30%'>
                 </div>
             </div>
         </div>
